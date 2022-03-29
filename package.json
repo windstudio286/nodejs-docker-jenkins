@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-docker-jenkins",
+  "version": "1.0.0",
+  "description": "Example how to dockerizate application written by nodejs and use jenkins to CICD",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windstudio286/nodejs-docker-jenkins.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/windstudio286/nodejs-docker-jenkins/issues"
+  },
+  "homepage": "https://github.com/windstudio286/nodejs-docker-jenkins#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
