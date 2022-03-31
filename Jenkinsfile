@@ -54,6 +54,7 @@ pipeline {
                         remote.password = passWord
                         sshCommand remote: remote, command: "docker pull ${DOCKER_IMAGE}:latest"
                         sshCommand remote: remote, command: "ls; cd data; ls; docker compose down; docker compose up -d --build"
+                        sshCommand remote: remote, command: "docker rmi $(docker images --filter "dangling=true" -q --no-trunc)"
                         //sshCommand remote: remote, command: 'cd data'
                         //sshCommand remote: remote, command: 'ls'
                         //sshCommand remote: remote, command: 'docker compose down'
