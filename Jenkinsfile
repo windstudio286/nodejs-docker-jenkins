@@ -52,8 +52,9 @@ pipeline {
                         echo passWord
                         remote.user = userName
                         remote.password = passWord
-
+                        sshCommand remote: remote, command: 'ls'
                         sshCommand remote: remote, command: 'cd data'
+                        sshCommand remote: remote, command: 'ls'
                         sshCommand remote: remote, command: 'docker compose down'
                         sshCommand remote: remote, command: 'docker compose up -d --build'
                     }
